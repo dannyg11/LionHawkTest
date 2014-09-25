@@ -14,8 +14,6 @@
   app.controller('MainCtrl', function ($scope) {
 
   			
-
-  	
   		
 
   		$scope.courses = [
@@ -110,8 +108,15 @@
 
 ];
 
-
-
- 	
- 
+		   $scope.myClass = null;
+    $scope.showClass = function(course) {
+      $scope.myClass = course;
+   
+    };
 });
+
+
+
+
+
+// There is nothing here 
