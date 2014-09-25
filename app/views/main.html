@@ -1,0 +1,31 @@
+
+	<h5 class="col-md-8">search by class name, department or id. Once you have checked your five class (or less) click the blue button to the right!</h5>
+<input type="text" placeholder="search for classes" ng-model="searchClass" class="form-control" style="margin-bottom: 1em"/>
+<div class="container col-md-12">
+	<table class="col-md-8">
+		<tr>
+			<td><h4>my classes</h4></td>
+		</tr>
+
+
+		
+	</table>
+
+<span class="btn btn-primary pull-right col-md-4">Choose These Classes</span>
+</div>
+<br /><br />
+<div class="container" style="margin-top: 1em">
+<table ng-repeat="course in courses | filter:searchClass">
+
+	<tr>
+		<td><button class="btn btn-primary"> add class</button></td>
+		<td style="padding: 1em">{{course.id}}</td>
+		<td style="padding-right:2em">{{course.departmentName}}</td>
+
+		<td >{{course.courseTitle}}</td>
+		
+
+
+</tr>
+</table>
+</div>
