@@ -13,12 +13,10 @@
 
   app.controller('MainCtrl', function ($scope) {
 
-  			
-  		
 
-  		$scope.courses = [
- 
- { id : "53d7b22a3ec72131232a93fb",  courseFull : "COMSW1001",  departmentName : "COMPUTER SCIENCE",  classNotes : "",  schoolName: "INTERFACULTY",  courseTitle: "INTRO TO INFORMATION SCIENCE",  schoolCode: "INTF",  minUnits : 0,  prefixName : "COMPUT SCI",  divisionName : "INTERFACULTY",  bulletinFlags : "CEFKRX9",  course : "COMS1001",  numFixedUnits : 30,  maxUnits : 0,  enrollmentStatus : "O",  departmentCode : "COMS",  approval : "",  divisionCode : "IF",  courseSubtitle : "INTRO TO INFORMATION SCIENCE",  prefixLongname : "COMPUTER SCIENCE" },
+ $scope.courses = [
+  
+  { id : "53d7b22a3ec72131232a93fb",  courseFull : "COMSW1001",  departmentName : "COMPUTER SCIENCE",  classNotes : "",  schoolName: "INTERFACULTY",  courseTitle: "INTRO TO INFORMATION SCIENCE",  schoolCode: "INTF",  minUnits : 0,  prefixName : "COMPUT SCI",  divisionName : "INTERFACULTY",  bulletinFlags : "CEFKRX9",  course : "COMS1001",  numFixedUnits : 30,  maxUnits : 0,  enrollmentStatus : "O",  departmentCode : "COMS",  approval : "",  divisionCode : "IF",  courseSubtitle : "INTRO TO INFORMATION SCIENCE",  prefixLongname : "COMPUTER SCIENCE" },
 
 {  id : "53d7b2263ec72131232a8360",  courseFull : "COMSW1004",  departmentName : "COMPUTER SCIENCE",  classNotes : "",  schoolName: "INTERFACULTY",  courseTitle: "INTRO-COMPUT SCI/PROG IN JAVA",  schoolCode: "INTF",  minUnits : 0,  prefixName : "COMPUT SCI",  divisionName : "INTERFACULTY",  bulletinFlags : "CEFKRX9",  course : "COMS1004",  numFixedUnits : 30,  maxUnits : 0,  enrollmentStatus : "O",  departmentCode : "COMS",  approval : "",  divisionCode : "IF",  courseSubtitle : "INTRO-COMPUT SCI/PROG IN JAVA",  prefixLongname : "COMPUTER SCIENCE" }
 ,
@@ -105,18 +103,22 @@
 {  id : "53d7b2263ec72131232a8378",  courseFull : "COMSW4901",  departmentName : "COMPUTER SCIENCE",  classNotes : "SIGN UP FOR SECTIONS IN DEPT. DO NOT SIGN UP FOR SEC 1",  schoolName: "INTERFACULTY",  courseTitle: "PROJECTS IN COMPUTER SCIENCE",  schoolCode: "INTF",  minUnits : 0,  prefixName : "COMPUT SCI",  divisionName : "INTERFACULTY",  bulletinFlags : "CEFKGRUXI",  course : "COMS4901",  numFixedUnits : 0,  maxUnits : 0,  enrollmentStatus : "F",  departmentCode : "COMS",  approval : "INS",  divisionCode : "IF",  courseSubtitle : "PROJECTS IN COMPUTER SCIENCE",  prefixLongname : "COMPUTER SCIENCE" }
 ,
 {  id : "53d7b2263ec72131232a8379",  courseFull : "COMSW4995",  departmentName : "COMPUTER SCIENCE",  classNotes : "",  schoolName: "INTERFACULTY",  courseTitle: "TOPICS IN COMPUTER SCIENCE",  schoolCode: "INTF",  minUnits : 0,  prefixName : "COMPUT SCI",  divisionName : "INTERFACULTY",  bulletinFlags : "CEFKGRUXI",  course : "COMS4995",  numFixedUnits : 30,  maxUnits : 0,  enrollmentStatus : "O",  departmentCode : "COMS",  approval : "",  divisionCode : "IF",  courseSubtitle : "DIGITAL GEOMETRY PROCESSING",  prefixLongname : "COMPUTER SCIENCE" }
+    
+    
+    ];
+  $scope.search = {};
 
-];
-
-		   $scope.myClass = null;
-    $scope.showClass = function(course) {
-      $scope.myClass = course;
-   
+  $scope.searchBy = function () {
+    return function (course) {
+      if ( $scope.search[course.id] === true ) {
+        return true;
+      }
     };
-});
+  };
+
+  });
 
 
+ 
 
 
-
-// There is nothing here 
