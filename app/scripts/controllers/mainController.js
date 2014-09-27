@@ -11,7 +11,9 @@
 // Code goes here
 
 
-  app.controller('MainCtrl', function ($scope) {
+  app.controller('MainCtrl', function ($scope, ClassShare) {
+
+  	
 
 
  $scope.courses = [
@@ -115,6 +117,8 @@
       }
     };
   };
+
+
 
   });
 

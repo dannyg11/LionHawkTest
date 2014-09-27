@@ -25,9 +25,13 @@ var app = angular.module('newAngApp', [
       })
       .when('/my-classes', {
         templateUrl: 'views/myClasses.html', 
-        controller: 'MainCtrl'
+        controller: 'ClassCtrl'
       })
       .otherwise({
         redirectTo: '/'
       });
   });
+
+  app.factory('ClassShare', function() {
+
+  })
